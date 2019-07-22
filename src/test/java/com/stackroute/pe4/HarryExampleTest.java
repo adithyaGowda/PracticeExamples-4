@@ -20,8 +20,20 @@ public class HarryExampleTest {
     }
 
     @Test
-    public void input(){
+    public void inputStringChecksForWordHarry(){
 
         assertEquals(true, harryExample.exampleHarry("This is Harry"));
+    }
+
+    @Test
+    public void inputStringChecksForWordHarryAndReturnFalse(){
+
+        assertEquals(false, harryExample.exampleHarry("This is Henry"));
+    }
+
+    @Test
+    public void inputStringChecksForNotEquality(){
+
+        assertNotEquals(true, harryExample.exampleHarry("This is Henry"));
     }
 }
