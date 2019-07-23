@@ -43,14 +43,10 @@ public class HarryExampleTest {
         assertNotEquals(true, harryExample.exampleHarry("adadasdsadasfd"));
     }
 
-    @Test
-    public void givenNullInputShouldResturnNull(){
-        try {
+    @Test(expected = NullPointerException.class)
+    public void givenNullInputShouldThrowNullPointerException(){
 
-            assertEquals(true, harryExample.exampleHarry(null));
-        }
-        catch (Exception e){
-            e.getMessage();
-        }
+            boolean flag = harryExample.exampleHarry(null);
+
     }
 }

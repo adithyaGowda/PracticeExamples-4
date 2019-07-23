@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class HarryExample {
 
 
-    public boolean exampleHarry(String input) throws NullPointerException{
+    public boolean exampleHarry(String input){
 
 
 
