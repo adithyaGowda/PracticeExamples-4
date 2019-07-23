@@ -20,20 +20,37 @@ public class HarryExampleTest {
     }
 
     @Test
-    public void inputStringChecksForWordHarry(){
+    public void givenInputShouldReturnBooleanTrue (){
 
         assertEquals(true, harryExample.exampleHarry("This is Harry"));
     }
 
     @Test
-    public void inputStringChecksForWordHarryAndReturnFalse(){
+    public void givenInputShouldReturnBooleanValue (){
+
+        assertEquals(true, harryExample.exampleHarry("Hey my name is Harry and I'm from Berlin"));
+    }
+
+    @Test
+    public void givenInputShouldReturnBooleanFalse (){
 
         assertEquals(false, harryExample.exampleHarry("This is Henry"));
     }
 
     @Test
-    public void inputStringChecksForNotEquality(){
+    public void givenInputStringChecksForNotEquality(){
 
-        assertNotEquals(true, harryExample.exampleHarry("This is Henry"));
+        assertNotEquals(true, harryExample.exampleHarry("adadasdsadasfd"));
+    }
+
+    @Test
+    public void givenNullInputShouldResturnNull(){
+        try {
+
+            assertEquals(true, harryExample.exampleHarry(null));
+        }
+        catch (Exception e){
+            e.getMessage();
+        }
     }
 }

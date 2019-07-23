@@ -6,11 +6,20 @@ import java.util.regex.Pattern;
 public class HarryExample {
 
 
-    public boolean exampleHarry(String input){
+    public boolean exampleHarry(String input) throws NullPointerException{
+
+
 
         String [] data = input.split(" ");
 
-        boolean isMatch = Pattern.matches("Harry",data[2]);
+        String x = "";
+
+        for (int i=0; i<data.length; i++){
+            if (data[i].equals("Harry"))
+                x = data[i];
+        }
+
+        boolean isMatch = Pattern.matches("Harry",x);
 
         System.out.println("Is Harry here? "+isMatch);
 
@@ -18,3 +27,4 @@ public class HarryExample {
         return isMatch;
     }
 }
+
