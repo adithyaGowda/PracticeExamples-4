@@ -21,7 +21,7 @@ public class SortAlphabeticallyTest {
     }
 
     @Test
-    public void inputStringDataMustPrintWordsAlphabetically(){
+    public void givenInputStringDataShouldPrintWordsAlphabetically(){
         String x = "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do " +
                 "eiusmod tempor incididunt ut labore et dolore magna aliqua" +
                 " Ut enim ad minim veniam quis nostrud ";
@@ -29,20 +29,21 @@ public class SortAlphabeticallyTest {
     }
 
     @Test
-    public void inputStringDataValidatingForNotEquality(){
+    public void givenInputStringDataValidatingForNotEquality(){
         String x = "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do " +
                 "eiusmod tempor incididunt ut labore et dolore magna aliqua" +
                 " Ut enim ad minim veniam quis nostrud ";
         assertNotEquals("not done",sortAlphabetically.alphabeticallySort(x));
     }
 
-    @Test
-    public void inputNullReturnsNull(){
-        assertNull(sortAlphabetically.alphabeticallySort(null));
+    @Test( expected = NullPointerException.class )
+    public void givenInputNullReturnsNull(){
+
+        String string = sortAlphabetically.alphabeticallySort(null);
     }
 
     @Test
-    public void inputStringMustReturnNotNullValue(){
+    public void givenInputStringShouldReturnNotNullValue(){
         assertNotNull(sortAlphabetically.alphabeticallySort("Hello world how you are doing"));
     }
 

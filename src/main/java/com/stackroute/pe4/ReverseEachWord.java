@@ -7,9 +7,6 @@ public class ReverseEachWord {
 
          String output = " ";
 
-         if (input == null)
-             return null;
-
          String[] eachWord = input.split(" ");
 
          for (int i=0; i<eachWord.length; i++){

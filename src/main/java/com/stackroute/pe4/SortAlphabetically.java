@@ -7,9 +7,6 @@ public class SortAlphabetically {
 
     public String alphabeticallySort(String input){
 
-        if (input == null)
-            return null;
-
         String temp = null;
 
         String[] words = input.split(" ");

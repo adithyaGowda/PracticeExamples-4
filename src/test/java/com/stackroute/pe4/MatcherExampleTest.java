@@ -21,26 +21,32 @@ public class MatcherExampleTest {
     }
 
     @Test
-    public void inputStringShouldMatchThePattern(){
-        assertEquals("Done", matcherExample.matcherEx("She sells seashells by the seashore","se"));
+    public void givenInputStringShouldMatchThePattern(){
+        assertEquals("Matched", matcherExample.matcherEx("She sells seashells by the seashore","se"));
 
     }
 
     @Test
-    public void inputStringValidatesForNotEqualValues(){
-        assertNotEquals("not done", matcherExample.matcherEx("She sells seashells by the seashore","se"));
+    public void givenInputStringValidatesForNotEqualValues(){
+        assertNotEquals(" ", matcherExample.matcherEx("She sells seashells by the seashore","se"));
 
     }
 
     @Test
-    public void inputUnmatchedSubstringShouldReturnNull(){
-        assertNull(matcherExample.matcherEx("She sells seashells by the seashore", "ab"));
+    public void givenInputUnmatchedSubstringShouldReturnAMessage(){
+        assertEquals("Not matched",matcherExample.matcherEx("She sells seashells by the seashore", "ab"));
 
     }
 
     @Test
     public void inputMatchedSubstringShouldReturnNotNUll(){
         assertNotNull(matcherExample.matcherEx("She sells seashells by the seashore", "lls"));
+
+    }
+
+    @Test
+    public void inputNullValuesReturnsNullValue(){
+        assertNull(matcherExample.matcherEx(null, null));
 
     }
 

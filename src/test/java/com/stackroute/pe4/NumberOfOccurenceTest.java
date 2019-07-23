@@ -20,23 +20,25 @@ public class NumberOfOccurenceTest {
     }
 
     @Test
-    public void inputStringShouldReturnNumberOfOccurence(){
+    public void givenInputStringShouldReturnNumberOfOccurence(){
         assertEquals(10,numberOfOccurence.occurenceOfChar("Java is java again java again","a"));
     }
 
     @Test
-    public void inputStringWillNotGiveTheExpectedResult(){
+    public void givenInputStringWillNotGiveTheExpectedResult(){
         assertNotEquals(1,numberOfOccurence.occurenceOfChar("Java is java again java again","j"));
     }
 
     @Test
-    public void inputStringShouldReturnNumberOfOccurenceofACharacter(){
+    public void givenInputStringShouldReturnNumberOfOccurenceofACharacter(){
         assertEquals(5,numberOfOccurence.occurenceOfChar("hello world, welcome to programming","o"));
     }
 
-    @Test
-    public void inputNullShouldGiveZeroCount(){
-        assertEquals(0,numberOfOccurence.occurenceOfChar(null,null));
+    @Test( expected = NullPointerException.class )
+    public void inputNullValuesGives(){
+
+        int data = numberOfOccurence.occurenceOfChar(null,null);
+
     }
 
 

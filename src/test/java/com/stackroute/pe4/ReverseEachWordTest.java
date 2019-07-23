@@ -21,18 +21,24 @@ public class ReverseEachWordTest {
     }
 
     @Test
-    public void inputStringShouldReturnTheReversedString(){
+    public void givenInputStringShouldReturnTheReversedString(){
         assertEquals("olleh dlrow",reverseEachWord.reverseString("hello world"));
     }
 
     @Test
-    public void inputStringIsNotEqualToExpectedOutput(){
+    public void givenInputStringIsNotEqualToExpectedOutput(){
         assertNotEquals("o",reverseEachWord.reverseString("hello world"));
     }
 
     @Test
-    public void inputNullInputGivesNullOutput(){
-        assertNull(reverseEachWord.reverseString(null));
+    public void givenInputStringReturnsNotNull(){
+        assertNotNull(reverseEachWord.reverseString("welcome to programming"));
+    }
+
+    @Test( expected = NullPointerException.class )
+    public void givenInputNullInputGivesNull(){
+
+        String string = reverseEachWord.reverseString(null);
     }
 
 }

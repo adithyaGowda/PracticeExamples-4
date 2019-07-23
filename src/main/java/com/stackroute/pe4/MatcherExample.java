@@ -7,6 +7,9 @@ public class MatcherExample {
 
     public String matcherEx(String input, String word){
 
+        if (input == null | word == null)
+            return null;
+
 
         int count = 0;
 
@@ -22,8 +25,8 @@ public class MatcherExample {
         }
 
         if(count == 0)
-            return null;
+            return "Not matched";
         else
-            return "Done";
+            return "Matched";
     }
 }
